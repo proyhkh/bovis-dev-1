@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   urlApiBovis: 'https://web-api-bovis.azurewebsites.net/',
-  redirectUri: 'https://proud-sea-0d98bd40f.2.azurestaticapps.net/',
-  clientID: '087f3ba6-2417-4f9d-a6ce-378095681e11',  
+  redirectUri: 'https://brave-pond-01ea24c10.3.azurestaticapps.net',
+  clientID: '02d0add9-98d8-4c97-9bf8-06ab1f88344a',  
   urlAuthority: 'https://login.microsoftonline.com/49ef9ec4-2b0b-47a1-94f3-e82844c4f61f'
 };
