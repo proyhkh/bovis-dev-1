@@ -89,12 +89,12 @@ export class MenuSidebarComponent implements OnInit {
         ],
       },
       {
-        title: 'COSTO DE EMPLEDADOS',
+        title: 'COSTO DE EMPLEADOS',
         icon: 'icon-costos',
         items: [
           [
             {
-              label: 'COSTO DE EMPLEDADOS',
+              label: 'COSTO DE EMPLEADOS',
               items: [
                 {
                   label: 'Costo por empleado',
@@ -117,9 +117,15 @@ export class MenuSidebarComponent implements OnInit {
               items: [
                 {
                   label: 'Carga de SAE',
+                  routerLink: ['cie/carga-sae'],
+                  command: () =>
+                    this.setModule('CIE'.toUpperCase()),
                 },
                 {
                   label: 'CEI – Resultado búsqueda',
+                  routerLink: ['cie/resultado-busqueda'],
+                  command: () =>
+                    this.setModule('CIE'.toUpperCase()),
                 },
               ],
             },

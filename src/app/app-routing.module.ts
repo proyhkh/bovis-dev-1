@@ -21,6 +21,11 @@ const routes: Routes = [
           import('./empleados/empleados.module').then((m) => m.EmpleadosModule),
       },
       {
+        path: 'cie',
+        loadChildren: () =>
+          import('./cie/cie.module').then((m) => m.CieModule),
+      },
+      {
         path: 'pec',
         loadChildren: () =>
           import('./dor/dor.module').then((m) => m.DorModule),
