@@ -16,8 +16,8 @@ export class CargaSaeComponent implements OnInit {
   isXlsx = true;
   isLoadingFile = false;
   companyOptions: Options[] = [
-    { name: 'Test 1', value: 'test1' },
-    { name: 'Test 2', value: 'test2' }
+    { name: 'Empresa 1', value: 'E1' },
+    { name: 'Empresa 2', value: 'E2' }
   ];
 
   constructor() { }

@@ -1,0 +1,111 @@
+<div class="main-container">
+  <div class="buttons-container">
+    <button type="button" class="btn btn-info" (click)="guardar()">Guardar</button>
+  </div>
+
+  <div class="grid">
+    <div class="col">
+        <label for="categoria">Categoría:</label>
+        <p-dropdown 
+          id="categoria" 
+          [options]="[]" 
+          (onChange)="null"
+          placeholder="Seleccionar una categoría" 
+          optionLabel="name" 
+          [showClear]="true"
+          [style]="{ width: '100%' }"
+        ></p-dropdown>
+    </div>
+    <div class="col">
+      <label for="puesto">Puesto sugerido:</label>
+      <p-dropdown 
+        id="puesto" 
+        [options]="[]" 
+        (onChange)="null"
+        placeholder="Seleccionar un puesto" 
+        optionLabel="name" 
+        [showClear]="true"
+        [style]="{ width: '100%' }"
+      ></p-dropdown>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col">
+      <label for="estudios">Nivel de estudios:</label>
+      <p-dropdown 
+        id="estudios" 
+        [options]="[]" 
+        (onChange)="null"
+        placeholder="Seleccionar un nivel" 
+        optionLabel="name" 
+        [showClear]="true"
+        [style]="{ width: '100%' }"
+      ></p-dropdown>
+    </div>
+    <div class="col">
+      <label for="profesion">Profesión:</label>
+      <input 
+        id="profesion"
+        type="text" 
+        pInputText
+        class="form-control"  
+        placeholder="Escribe una profesión"
+        [(ngModel)]="requerimiento.profesion">
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col">
+      <label for="jornada">Jornada:</label>
+      <p-dropdown 
+        id="jornada" 
+        [options]="[]" 
+        (onChange)="null"
+        placeholder="Seleccionar una jornada" 
+        optionLabel="name" 
+        [showClear]="true"
+        [style]="{ width: '100%' }"
+      ></p-dropdown>
+    </div>
+    <div class="col">
+      <label for="jornada">Sueldo:</label>
+      <div class="flex justify-content-between gap-3 p-fluid">
+        <div class="flex-auto">
+          <p-inputNumber 
+            [(ngModel)]="requerimiento.sueldo.min" 
+            inputId="min" 
+            locale="es-MX" 
+            mode="decimal" 
+            [minFractionDigits]="2" 
+            [maxFractionDigits]="5"
+          ></p-inputNumber>
+        </div>
+        <div class="flex-auto">
+          <p-inputNumber 
+            [(ngModel)]="requerimiento.sueldo.max" 
+            inputId="max" 
+            locale="es-MX" 
+            mode="decimal" 
+            [minFractionDigits]="2" 
+            [maxFractionDigits]="5"
+          ></p-inputNumber>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col">
+      <label for="habilidades">Habilidades:</label>
+      <div *ngFor="let habilidad of habilidadesDisponibles" class="field-checkbox" style="margin-top: 1%;">
+        <p-checkbox name="group" [value]="habilidad.code" [(ngModel)]="requerimiento.habilidades" [inputId]="habilidad.code"></p-checkbox>
+        <label [for]="habilidad.code">{{ habilidad.name }}</label>
+      </div>
+    </div>
+    <div class="col">
+      <label for="experiencias">Experiencias:</label>
+      <div *ngFor="let experiencia of experienciasDisponibles" class="field-checkbox" style="margin-top: 1%;">
+        <p-checkbox name="group" [value]="experiencia.code" [(ngModel)]="requerimiento.experiencias" [inputId]="experiencia.code"></p-checkbox>
+        <label [for]="experiencia.code">{{ experiencia.name }}</label>
+      </div>
+    </div>
+  </div>
+</div>

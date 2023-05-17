@@ -41,7 +41,10 @@ export class MenuSidebarComponent implements OnInit {
               label: 'EMPLEADOS',
               items: [
                 {
-                  label: 'Generar requerimiento'
+                  label: 'Generar requerimiento',
+                  routerLink: ['/empleados/generar-requerimiento'],
+                  command: () =>
+                    this.setModule('Generar Requerimiento'.toUpperCase()),
                 },
                 {
                   label: 'Ver requerimientos',

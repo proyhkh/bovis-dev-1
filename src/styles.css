@@ -294,3 +294,12 @@ a.article:hover {
     display: none;
   } */
 }
+
+/* Agregado por sebastian.flores */
+.main-container {
+  margin: 2%;
+}
+
+.buttons-container {
+  margin-bottom: 2rem;
+}

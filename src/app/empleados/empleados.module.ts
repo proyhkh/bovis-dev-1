@@ -15,13 +15,19 @@ import { AccordionModule } from 'primeng/accordion';
 import { PersonaRegistroComponent } from './components/persona-registro/persona-registro.component';
 import { MessagesModule } from 'primeng/messages';
 import { EmpleadosPrincipalComponent } from './components/empleados-principal/empleados-principal.component';
+import { GenerarRequerimientoComponent } from './components/generar-requerimiento/generar-requerimiento.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
     EmpleadosComponent,
     EmpleadosRegistroComponent,
     PersonaRegistroComponent,
-    EmpleadosPrincipalComponent
+    EmpleadosPrincipalComponent,
+    GenerarRequerimientoComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +39,11 @@ import { EmpleadosPrincipalComponent } from './components/empleados-principal/em
     ProgressBarModule,
     CalendarModule,
     AccordionModule,
-    MessagesModule
+    MessagesModule,
+    InputTextModule,
+    MultiSelectModule,
+    InputNumberModule,
+    CheckboxModule
   ],
   exports:[
 
